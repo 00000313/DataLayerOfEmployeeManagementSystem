@@ -1,0 +1,54 @@
+package com.thinking.machines.hr.dl.DTO;
+import com.thinking.machines.hr.dl.interfaces.DTO.*;
+public class DesignationDTO implements DesignationDTOInterface
+{
+public int code;
+public String title;
+public DesignationDTO()
+{
+this.code=0;
+this.title=""; 
+}
+
+public void setCode(int code)
+{
+this.code=code;
+}
+public int getCode()
+{
+return this.code;
+}
+public void setTitle(java.lang.String title)
+{
+this.title=title;
+}
+public java.lang.String getTitle()
+{
+return this.title;
+}
+
+public boolean equals(Object other)
+{
+if(!(other instanceof DesignationDTOInterface)) return false;
+DesignationDTOInterface designationDTO;
+designationDTO=(DesignationDTO)other;
+return this.code==designationDTO.getCode();
+}
+
+public int compareTo(DesignationDTOInterface designationDTO)
+{
+return this.code-designationDTO.getCode();
+}
+
+public int hashCode()
+{
+return code;
+}
+}
+
+
+
+
+
+
+
